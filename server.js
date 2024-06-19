@@ -19,6 +19,22 @@ app.get('/', async (req, res) =>
 }
 );
 
+app.get('/login', (req, res) => {
+    res.render('login', { user: null, error: null});
+});
+
+app.post('/login', async (req, res) => {
+    return loginPost(req, res);
+});
+
+app.get('/signup', (req, res) => {
+    res.render('signup', { user: null, error: null, success: null });
+});
+
+app.post('/signup', async (req, res) => {
+    return registerPost(req, res);
+});
+
 app.listen(port, '0.0.0.0', () => {
     console.log(`Listening at :${port}`);
 });
