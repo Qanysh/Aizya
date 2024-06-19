@@ -1,0 +1,38 @@
+.main{
+    font-family: Georgia, serif;
+    background-color: #F9E7E5;
+}
+
+body h1{
+    font-size: 3.5em;
+    color: #F47CB9;
+}
+
+body h2{
+    color: #F47CB9;
+}
+
+.menu {
+    list-style: none;
+    padding: 0;
+    margin: 20px auto;
+}
+
+.menu li {
+    margin: 10px 0;
+}
+
+.menu li a {
+    color: #5271FF;
+    text-decoration: none;
+    font-size: 2em;
+    display: block;
+    text-align: right;
+    padding: 10px;
+    border-radius: 8px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.menu li a:hover {
+    background: rgba(255, 255, 255, 0.2);
+}

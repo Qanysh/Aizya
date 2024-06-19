@@ -15,14 +15,26 @@ app.use(express.static(imagesPath)); // Используем express.static дл
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-app.get('/', async (req, res) => 
-{
+app.get('/', async (req, res) => {
     res.render('index');
 }
 );
 
+app.get('/menu', async (req, res) => {
+    res.render('pages/menu');
+}
+);
+
+app.get('/first_meeting', async (req, res) =>{
+    res.render('pages/f_meeting');
+});
+
+app.get('/calendar', async (req, res) =>{
+    res.render('pages/calendar');
+});
+
 app.get('/login', (req, res) => {
-    res.render('pages/login', { user: null, error: null});
+    res.render('pages/login', { user: null, error: null });
 });
 
 app.post('/login', async (req, res) => {

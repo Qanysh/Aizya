@@ -6,10 +6,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Menu</title>
     <link rel="stylesheet" href="styles/menu_style.css">
-    <%- include('components/imports.ejs') %>
+    <%- include('../components/imports.ejs') %>
 </head>
-<body>
-    
+
+<body class="main">
+    <div class="container py-5">
+        <div class="row">
+            <div class="col-md">
+                <h1>Menu</h1>
+                <h2>chooose happiness</h2>
+            </div>
+            <div class="col-md">
+                <ul class="menu">
+                    <li><a href="/first_meeting">Our first meeting</a></li>
+                    <li><a href="#">How we have changed</a></li>
+                    <li><a href="#">Chronology</a></li>
+                    <li><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="/calendar">Calendar</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>
