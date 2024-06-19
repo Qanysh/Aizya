@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="styles/login_style.css">
+    <%- include('../components/imports.ejs') %>
+</head>
+<body>
+    <div class="container my-5">
+        <div class="row align-items-center px-5">
+            <div class="col-md-6">
+                <!-- Login Form -->
+                <form method="POST" action="/login">
+                    <div class="fs-3 fw-semibold mb-3">Войдите в ваш аккаунт</div>
+                    <% if (error) {%>
+                        <span class="badge text-bg-danger mb-3 fs-5"><%= error %></span>
+                    <% } %>
+                    <div class="row">
+                        <div class="mb-3">
+                            <label for="username" class="form-label">Имя пользователя</label>
+                            <input type="text" class="form-control" name="username" placeholder="Введите имя пользователя">
+                        </div>
+                        <div class="mb-3">
+                            <label for="password" class="form-label">Пароль</label>
+                            <input type="password" class="form-control" name="password" placeholder="Введите пароль">
+                        </div>
+                        <div class="mb-3">
+                            <button type="submit" class="btn btn-primary">Войти</button>
+                        </div>
+                        <div class="mb-3">
+                            Еще не загеристрированы? <a href="/signup" class="link-primary text-decoration-none">Зарегистрируйтесь сейчас!</a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

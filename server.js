@@ -1,6 +1,8 @@
 const express = require('express');
 const session = require('express-session');
 const path = require('path');
+const { registerPost } = require('./controllers/registerController');
+const { loginPost } = require('./controllers/loginController');
 
 const app = express();
 const port = 3000;
@@ -20,7 +22,7 @@ app.get('/', async (req, res) =>
 );
 
 app.get('/login', (req, res) => {
-    res.render('login', { user: null, error: null});
+    res.render('pages/login', { user: null, error: null});
 });
 
 app.post('/login', async (req, res) => {
@@ -28,7 +30,7 @@ app.post('/login', async (req, res) => {
 });
 
 app.get('/signup', (req, res) => {
-    res.render('signup', { user: null, error: null, success: null });
+    res.render('pages/signup', { user: null, error: null, success: null });
 });
 
 app.post('/signup', async (req, res) => {
