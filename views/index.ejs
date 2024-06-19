@@ -32,9 +32,14 @@
                         </svg>
                     </div>
                 </div>
+
                 <div class="col-md-3 text-center">
-                    <a href="/signup" class="button" id="sign-up">Sign Up</a>
-                    <a href="/login" class="button" id="log-in">Log In</a>
+                    <% if (user) { %>
+                        <a href="/menu" class="button">Menu</a>
+                        <% } else { %>
+                            <a href="/signup" class="button" id="sign-up">Sign Up</a>
+                            <a href="/login" class="button" id="log-in">Log In</a>
+                            <% } %>
                 </div>
             </div>
         </div>
@@ -42,9 +47,15 @@
 
     <section class="main">
         <div class="container-fluid py-5">
-            <div class="row align-items-center py-5">
-                <h1>Quote of the Day</h1>
-            </div>
+            <% if (user) { %>
+                <div class="row align-items-center py-5">
+                    <h2 class="text-white">Welcome, <%= user.username %>!
+                    </h2>
+                </div>
+                <% } %>
+                    <div class="row align-items-center py-5">
+                        <h1>Quote of the Day</h1>
+                    </div>
         </div>
     </section>
 

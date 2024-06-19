@@ -3,6 +3,7 @@ const session = require('express-session');
 const path = require('path');
 const { registerPost } = require('./controllers/registerController');
 const { loginPost } = require('./controllers/loginController');
+const { User } = require('./database/db');
 
 const app = express();
 const port = 3000;
@@ -16,7 +17,14 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 app.get('/', async (req, res) => {
-    res.render('index');
+    const userId = req.session?.userId;
+
+    const user = await User.findById(userId);
+    if (userId) {
+        return res.render('index', { user: await User.findById(userId) });
+    }
+
+    res.render('index', { user });
 }
 );
 
@@ -25,11 +33,11 @@ app.get('/menu', async (req, res) => {
 }
 );
 
-app.get('/first_meeting', async (req, res) =>{
+app.get('/first_meeting', async (req, res) => {
     res.render('pages/f_meeting');
 });
 
-app.get('/calendar', async (req, res) =>{
+app.get('/calendar', async (req, res) => {
     res.render('pages/calendar');
 });
 
