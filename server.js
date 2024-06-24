@@ -1,9 +1,11 @@
 const express = require('express');
 const session = require('express-session');
 const path = require('path');
+const bodyParser = require('body-parser');
 const { registerPost } = require('./controllers/registerController');
 const { loginPost } = require('./controllers/loginController');
-const { User } = require('./database/db');
+const { User, Event } = require('./database/db');
+const eventRoutes = require('./routes/eventRoutes');
 
 const app = express();
 const port = 3000;
@@ -15,6 +17,8 @@ app.set('view engine', 'ejs');
 app.use(express.static(imagesPath)); // Используем express.static для обслуживания статических файлов из папки с изображениями
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+app.use(bodyParser.json());
+app.use('/api', eventRoutes);
 
 app.get('/', async (req, res) => {
     const userId = req.session?.userId;

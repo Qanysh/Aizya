@@ -10,7 +10,14 @@ const userSchema = new Schema({
     admin: {type: Boolean, default: false}
 });
 
+const eventSchema = new Schema({
+    date: { type: String, required: true },
+    name: { type: String, required: true },
+    notes: { type: String, required: true },
+    tag: { type: String, required: true }
+});
 
 const User = mongoose.model('User', userSchema);
+const Event = mongoose.model('Event', eventSchema);
 
-module.exports = {User};
+module.exports = {User, Event};

@@ -45,7 +45,7 @@ body.overlay:before {
 
 html {
     height: 100%;
-    background: #003664;
+    background: #FF00FF;
     color: #ffffff;
     font-size: 13px;
     font-family: 'Lato', sans-serif;
@@ -124,7 +124,7 @@ header {
     height: 80px;
     width: 100%;
     z-index: 50;
-    background: #003664;
+    background: #FF00FF;
 }
 
 header>.wrapper {
@@ -228,7 +228,7 @@ header>.wrapper a {
     width: 30px;
     height: 30px;
     padding: 9px 12px;
-    background-color: #003664;
+    background-color: #FF00FF;
     cursor: pointer;
     z-index: 10;
     box-sizing: border-box;
@@ -244,7 +244,7 @@ header>.wrapper a {
 
 .prev:hover {
     padding: 9px 10px;
-    background-color: #0054a3;
+    background-color: #ff80ff;
 }
 
 .next {
@@ -253,7 +253,7 @@ header>.wrapper a {
 
 .next:hover {
     padding: 9px 14px;
-    background-color: #0054a3;
+    background-color: #ff80ff;
 }
 
 .c-paginator__year {
@@ -267,7 +267,8 @@ header>.wrapper a {
     padding: 0 10px;
     line-height: 30px;
     height: 30px;
-    background-color: #003664;
+    background-color: #ff4dff;
+    color: #f5f5f5;
     text-transform: uppercase;
     letter-spacing: 2px;
     border-radius: 15px;
@@ -280,10 +281,11 @@ header>.wrapper a {
 }
 
 .o-btn:hover {
-    background-color: #0054a3;
+    background-color: #FF00FF;
 }
 
 .c-calendar {
+    color: #ffffff;
     padding-top: 80px;
     display: flex;
     justify-content: space-between;
@@ -291,7 +293,7 @@ header>.wrapper a {
 }
 
 .c-calendar__style {
-    background-color: #00407b;
+    background-color: #FF00FF;
     margin: 20px;
     padding: 10px;
     box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.18);
@@ -397,7 +399,7 @@ header>.wrapper a {
     width: 40px;
     height: 40px;
     line-height: 40px;
-    background: #003664;
+    background: #ff80ff;
     transform: translate(-50%, -50%);
     border-radius: 50%;
     transition: all 0.8s cubic-bezier(0.4, 0.0, 0.2, 1);
@@ -415,23 +417,23 @@ header>.wrapper a {
 }
 
 .c-cal__cel:nth-child(7) p {
-    background: #00305a;
+    background: #b300b3;
 }
 
 .c-cal__cel:hover {
-    background-color: #0054a3 !important;
+    background-color: #ff80ff !important;
 }
 
 .c-cal__cel:hover p {
-    background: #00305a !important;
+    background: #b300b3 !important;
 }
 
 .c-cal__cel.isSelected {
-    background-color: #0054a3;
+    background-color: #b300b3;
 }
 
 .c-cal__cel.isSelected p {
-    background: #00305a;
+    background: #ff80ff;
 }
 
 .c-cal__cel.isToday {
