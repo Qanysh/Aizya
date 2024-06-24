@@ -52,11 +52,11 @@
                     <h2 class="text-white">Welcome, <%= user.username %>!
                     </h2>
                 </div>
-                
-                    <div class="row align-items-center py-2">
-                        <div id="timeSince"></div>
-                    </div>
-                    <% } %>
+
+                <div class="time-container" id="timeSinceContainer">
+                    <div id="timeSince"></div> <!-- Этот блок будет содержать отсчет времени -->
+                </div>
+                <% } %>
                     <div class="row align-items-center py-5">
                         <h1>Quote of the Day</h1>
                     </div>
